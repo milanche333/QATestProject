@@ -23,7 +23,7 @@ export default defineConfig({
     video: 'retain-on-failure',
     actionTimeout: 10_000,
     navigationTimeout: 30_000,
-    headless: true,
+    headless: isCI,
   },
   projects: [
     {

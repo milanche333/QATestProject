@@ -20,8 +20,8 @@ npm run report
 
 | Command                      | Runs                                              |
 | ---------------------------- | ------------------------------------------------- |
-| `npm test`                   | All 20 regular tests: API + headless Chromium     |
-| `npm run test:ui`            | 10 UI tests                                       |
+| `npm test`                   | All 20 regular tests: API + Chromium              |
+| `npm run test:ui`            | 10 UI tests with a visible browser locally        |
 | `npm run test:api`           | 10 API tests                                      |
 | `npm run test:demo`          | 1 UI + 1 API example that intentionally fail      |
 | `npm run test:cross-browser` | 3 UI smoke tests in Chromium, Firefox, and WebKit |
@@ -29,7 +29,8 @@ npm run report
 | `npm run format`             | Format the project                                |
 | `npm run report`             | Open the latest run's HTML report                 |
 
-Add `-- --headed` to `npm run test:ui` to watch the browser, or `-- --grep UI-05` to select a case.
+Local UI runs open a visible browser; runs with `CI` set (including GitHub Actions) use headless mode.
+Use `npm run test:ui -- --grep UI-05` to select a case.
 Run `npm run install:browsers` before cross-browser testing.
 
 Demo tests are excluded by default. They deliberately expect incorrect login text and HTTP 201 instead of 200;

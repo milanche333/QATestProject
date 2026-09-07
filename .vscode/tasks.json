@@ -16,7 +16,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Test: UI Chromium (headless)",
+      "label": "Test: UI Chromium (headed)",
       "type": "shell",
       "command": "npm run test:ui",
       "group": "test",
@@ -33,13 +33,6 @@
       "label": "Report: Latest run",
       "type": "shell",
       "command": "npm run report",
-      "problemMatcher": []
-    },
-    {
-      "label": "Test: UI Chromium (headed)",
-      "type": "shell",
-      "command": "npm run test:ui -- --headed",
-      "group": "test",
       "problemMatcher": []
     }
   ]
