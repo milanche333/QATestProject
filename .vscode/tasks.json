@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check all",
+      "type": "shell",
+      "command": "npm run check",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: API",
+      "type": "shell",
+      "command": "npm run test:api",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: UI Chromium (headless)",
+      "type": "shell",
+      "command": "npm run test:ui",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: Intentional failure demos (expected red)",
+      "type": "shell",
+      "command": "npm run test:demo",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Report: Latest run",
+      "type": "shell",
+      "command": "npm run report",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: UI Chromium (headed)",
+      "type": "shell",
+      "command": "npm run test:ui -- --headed",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

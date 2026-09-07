@@ -1,0 +1,12 @@
+**/node_modules/
+**/playwright-report/
+**/test-results/
+**/.playwright/
+.env
+.env.*
+!.env.example
+.idea/
+.DS_Store
+coverage/
+*.log
+/qa-automation-playwright.zip

@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Playwright: Chromium (headed)",
+      "command": "npm run test:ui -- --headed",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

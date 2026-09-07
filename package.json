@@ -1,0 +1,30 @@
+{
+  "name": "qa-automation-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QA automation portfolio: 10 critical UI and 10 API scenarios with opt-in failure demos.",
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
+  "scripts": {
+    "install:browsers": "playwright install chromium firefox webkit",
+    "check": "tsc --noEmit && eslint . && prettier --check .",
+    "test": "playwright test --project=api --project=chromium",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=chromium",
+    "test:demo": "playwright test --project=api --project=chromium --grep @demo-failure --retries=0 --workers=1",
+    "test:cross-browser": "playwright test --project=chromium --project=firefox --project=webkit --grep @smoke",
+    "format": "prettier --write .",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.62.1",
+    "@types/node": "22.18.3",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.6",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.69.0"
+  }
+}
